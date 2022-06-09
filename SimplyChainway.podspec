@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.description  = "No Description"
   spec.homepage     = "https://github.com/VinceSantos/SimplyChainway"
   spec.license      = "MIT"
-  spec.author             = { "Vince Santos" => "vincecarlofsantos@gmail.com" }
+  spec.author             = { "Vince Santos" => "vince.santos@simplyrfid.com" }
   spec.platform     = :ios, "13.0"
   spec.source       = { :git => "https://github.com/VinceSantos/SimplyChainway.git", :tag => spec.version.to_s }
   spec.source_files  = "SimplyChainway"

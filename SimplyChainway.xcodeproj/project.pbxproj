@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8AACD76028525EEF00A68666 /* ChainwayService.swift in Headers */ = {isa = PBXBuildFile; fileRef = 8AD545B52852490B000134D3 /* ChainwayService.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		8AD545992852488C000134D3 /* SimplyChainway.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AD545982852488C000134D3 /* SimplyChainway.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8AD545A9285248B1000134D3 /* AppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD5459F285248B1000134D3 /* AppHelper.m */; };
 		8AD545AA285248B1000134D3 /* BluetoothUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AD545A0285248B1000134D3 /* BluetoothUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -84,6 +85,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AACD76028525EEF00A68666 /* ChainwayService.swift in Headers */,
 				8AD545AE285248B1000134D3 /* AppHelper.h in Headers */,
 				8AD545AD285248B1000134D3 /* RFIDBlutoothManager.h in Headers */,
 				8AD545B2285248B1000134D3 /* BLEModel.h in Headers */,

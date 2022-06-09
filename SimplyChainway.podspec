@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "SimplyChainway"
-  spec.version      = "0.1.0"
+  spec.version      = "0.1.1"
   spec.summary      = "A Framework for Chainway R6 Pro UHF"
   spec.description  = "No Description"
   spec.homepage     = "https://github.com/VinceSantos/SimplyChainway"

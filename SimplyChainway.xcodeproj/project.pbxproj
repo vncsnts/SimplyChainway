@@ -1,0 +1,378 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8AD545992852488C000134D3 /* SimplyChainway.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AD545982852488C000134D3 /* SimplyChainway.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8AD545A9285248B1000134D3 /* AppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD5459F285248B1000134D3 /* AppHelper.m */; };
+		8AD545AA285248B1000134D3 /* BluetoothUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AD545A0285248B1000134D3 /* BluetoothUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8AD545AD285248B1000134D3 /* RFIDBlutoothManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AD545A3285248B1000134D3 /* RFIDBlutoothManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8AD545AE285248B1000134D3 /* AppHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AD545A4285248B1000134D3 /* AppHelper.h */; };
+		8AD545AF285248B1000134D3 /* RFIDBlutoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD545A5285248B1000134D3 /* RFIDBlutoothManager.m */; };
+		8AD545B0285248B1000134D3 /* BluetoothUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD545A6285248B1000134D3 /* BluetoothUtil.m */; };
+		8AD545B1285248B1000134D3 /* BLEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD545A7285248B1000134D3 /* BLEModel.m */; };
+		8AD545B2285248B1000134D3 /* BLEModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AD545A8285248B1000134D3 /* BLEModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8AD545B62852490B000134D3 /* ChainwayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD545B52852490B000134D3 /* ChainwayService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8AD545952852488C000134D3 /* SimplyChainway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimplyChainway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AD545982852488C000134D3 /* SimplyChainway.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimplyChainway.h; sourceTree = "<group>"; };
+		8AD5459F285248B1000134D3 /* AppHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppHelper.m; sourceTree = "<group>"; };
+		8AD545A0285248B1000134D3 /* BluetoothUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothUtil.h; sourceTree = "<group>"; };
+		8AD545A3285248B1000134D3 /* RFIDBlutoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFIDBlutoothManager.h; sourceTree = "<group>"; };
+		8AD545A4285248B1000134D3 /* AppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppHelper.h; sourceTree = "<group>"; };
+		8AD545A5285248B1000134D3 /* RFIDBlutoothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFIDBlutoothManager.m; sourceTree = "<group>"; };
+		8AD545A6285248B1000134D3 /* BluetoothUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothUtil.m; sourceTree = "<group>"; };
+		8AD545A7285248B1000134D3 /* BLEModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEModel.m; sourceTree = "<group>"; };
+		8AD545A8285248B1000134D3 /* BLEModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEModel.h; sourceTree = "<group>"; };
+		8AD545B52852490B000134D3 /* ChainwayService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainwayService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8AD545922852488C000134D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8AD5458B2852488C000134D3 = {
+			isa = PBXGroup;
+			children = (
+				8AD545972852488C000134D3 /* SimplyChainway */,
+				8AD545962852488C000134D3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8AD545962852488C000134D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AD545952852488C000134D3 /* SimplyChainway.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AD545972852488C000134D3 /* SimplyChainway */ = {
+			isa = PBXGroup;
+			children = (
+				8AD545A4285248B1000134D3 /* AppHelper.h */,
+				8AD5459F285248B1000134D3 /* AppHelper.m */,
+				8AD545A8285248B1000134D3 /* BLEModel.h */,
+				8AD545A7285248B1000134D3 /* BLEModel.m */,
+				8AD545A0285248B1000134D3 /* BluetoothUtil.h */,
+				8AD545A6285248B1000134D3 /* BluetoothUtil.m */,
+				8AD545A3285248B1000134D3 /* RFIDBlutoothManager.h */,
+				8AD545A5285248B1000134D3 /* RFIDBlutoothManager.m */,
+				8AD545B52852490B000134D3 /* ChainwayService.swift */,
+				8AD545982852488C000134D3 /* SimplyChainway.h */,
+			);
+			path = SimplyChainway;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8AD545902852488C000134D3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AD545AE285248B1000134D3 /* AppHelper.h in Headers */,
+				8AD545AD285248B1000134D3 /* RFIDBlutoothManager.h in Headers */,
+				8AD545B2285248B1000134D3 /* BLEModel.h in Headers */,
+				8AD545AA285248B1000134D3 /* BluetoothUtil.h in Headers */,
+				8AD545992852488C000134D3 /* SimplyChainway.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8AD545942852488C000134D3 /* SimplyChainway */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AD5459C2852488C000134D3 /* Build configuration list for PBXNativeTarget "SimplyChainway" */;
+			buildPhases = (
+				8AD545902852488C000134D3 /* Headers */,
+				8AD545912852488C000134D3 /* Sources */,
+				8AD545922852488C000134D3 /* Frameworks */,
+				8AD545932852488C000134D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimplyChainway;
+			productName = SimplyChainway;
+			productReference = 8AD545952852488C000134D3 /* SimplyChainway.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8AD5458C2852488C000134D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					8AD545942852488C000134D3 = {
+						CreatedOnToolsVersion = 13.4;
+						LastSwiftMigration = 1340;
+					};
+				};
+			};
+			buildConfigurationList = 8AD5458F2852488C000134D3 /* Build configuration list for PBXProject "SimplyChainway" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8AD5458B2852488C000134D3;
+			productRefGroup = 8AD545962852488C000134D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8AD545942852488C000134D3 /* SimplyChainway */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8AD545932852488C000134D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AD545912852488C000134D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AD545B62852490B000134D3 /* ChainwayService.swift in Sources */,
+				8AD545A9285248B1000134D3 /* AppHelper.m in Sources */,
+				8AD545AF285248B1000134D3 /* RFIDBlutoothManager.m in Sources */,
+				8AD545B0285248B1000134D3 /* BluetoothUtil.m in Sources */,
+				8AD545B1285248B1000134D3 /* BLEModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8AD5459A2852488C000134D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8AD5459B2852488C000134D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8AD5459D2852488C000134D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = L6DYJZW798;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.simplyrfid.SimplyChainway;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8AD5459E2852488C000134D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = L6DYJZW798;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.simplyrfid.SimplyChainway;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AD5458F2852488C000134D3 /* Build configuration list for PBXProject "SimplyChainway" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AD5459A2852488C000134D3 /* Debug */,
+				8AD5459B2852488C000134D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AD5459C2852488C000134D3 /* Build configuration list for PBXNativeTarget "SimplyChainway" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AD5459D2852488C000134D3 /* Debug */,
+				8AD5459E2852488C000134D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8AD5458C2852488C000134D3 /* Project object */;
+}

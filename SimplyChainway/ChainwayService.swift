@@ -7,8 +7,10 @@
 
 import Foundation
 
+@objcMembers
 public class ChainwayService: NSObject {
-    static let shared = ChainwayService()
+    public static let shared = ChainwayService()
+    public var characterSupported = CharacterSupport.acsii
     private var rfidBLEManager: RFIDBlutoothManager!
     public weak var delegate: ChainwayServiceDelegate?
     private var foundDevices = [BLEModel]()
@@ -95,4 +97,10 @@ extension ChainwayServiceDelegate {
     func didConnectToDevice(deviceName: String) {}
     func didReceiveRFTags(tags: [String]) {}
     func didReceiveBarcode(barcode: String) {}
+}
+
+public enum CharacterSupport {
+    case acsii
+    case utf8
+    case gb2312
 }

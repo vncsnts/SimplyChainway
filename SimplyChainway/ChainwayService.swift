@@ -8,6 +8,7 @@
 import Foundation
 
 public class ChainwayService: NSObject {
+    static let shared = ChainwayService()
     private var rfidBLEManager: RFIDBlutoothManager!
     public weak var delegate: ChainwayServiceDelegate?
     private var foundDevices = [BLEModel]()

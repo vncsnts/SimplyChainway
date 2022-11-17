@@ -55,7 +55,11 @@ extension ChainwayService: FatScaleBluetoothManager {
     }
     
     public func disConnectPeripheral() {
-        print("disconnected to BLE Device")
+        delegate?.didDisconnectToDevice(deviceName: connectedDeviceName)
+    }
+    
+    public func didFailPeripheral() {
+        delegate?.didFailWithDevice(deviceName: connectedDeviceName)
     }
     
     public func receiveMessageWithtype(_ typeStr: String!, dataStr: String!) {
@@ -88,6 +92,8 @@ extension ChainwayService: FatScaleBluetoothManager {
 public protocol ChainwayServiceDelegate: AnyObject {
     func didReceiveDevices(devices: [String]) //The Delegate for the array of the updates received BLE Devices
     func didConnectToDevice(deviceName: String)
+    func didDisconnectToDevice(deviceName: String)
+    func didFailWithDevice(deviceName: String)
     func didReceiveRFTags(tags: [String])
     func didReceiveBarcode(barcode: String)
 }
@@ -95,6 +101,8 @@ public protocol ChainwayServiceDelegate: AnyObject {
 extension ChainwayServiceDelegate {
     func didReceiveDevices(devices: [String]) {}
     func didConnectToDevice(deviceName: String) {}
+    func didDisconnectToDevice(deviceName: String) {}
+    func didFailWithDevice(deviceName: String) {}
     func didReceiveRFTags(tags: [String]) {}
     func didReceiveBarcode(barcode: String) {}
 }

@@ -593,7 +593,7 @@
 {
     // LogRed(@"-- 连接失败 --");
     self.connectDevice = NO;
-    
+    [self.managerDelegate didFailPeripheral];
 }
 
 #pragma mark - CBPeripheralDelegate

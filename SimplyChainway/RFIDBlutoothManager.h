@@ -37,6 +37,8 @@
 - (void)connectPeripheralSuccess:(NSString *)nameStr;
 //断开外设
 -(void)disConnectPeripheral;
+//Added device failure delegate
+-(void)didFailPeripheral;
 //更改蓝牙设备名称成功
 - (void)updateBLENameSuccess;
 //  设置Gen2是否成功

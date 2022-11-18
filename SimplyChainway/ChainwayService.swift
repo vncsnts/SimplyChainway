@@ -88,6 +88,10 @@ extension ChainwayService: FatScaleBluetoothManager {
             }
         } else if typeStr == "e55" {
             delegate?.didReceiveBarcode(barcode: dataStr)
+        } else if typeStr == "e5" {
+            if let batteryInt = Int(dataStr) {
+                delegate?.didReceiveBatteryLevel(batteryLevel: batteryInt)
+            }
         }
     }
 
@@ -103,6 +107,7 @@ public protocol ChainwayServiceDelegate: AnyObject {
     func didConnectToDevice(deviceName: String)
     func didDisconnectToDevice(deviceName: String)
     func didFailWithDevice(deviceName: String)
+    func didReceiveBatteryLevel(batteryLevel: Int)
     func didReceiveRFTags(tags: [String])
     func didReceiveBarcode(barcode: String)
 }
@@ -112,6 +117,7 @@ extension ChainwayServiceDelegate {
     func didConnectToDevice(deviceName: String) {}
     func didDisconnectToDevice(deviceName: String) {}
     func didFailWithDevice(deviceName: String) {}
+    func didReceiveBatteryLevel(batteryLevel: Int) {}
     func didReceiveRFTags(tags: [String]) {}
     func didReceiveBarcode(barcode: String) {}
 }

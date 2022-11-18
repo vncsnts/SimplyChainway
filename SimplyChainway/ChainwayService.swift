@@ -35,6 +35,11 @@ public class ChainwayService: NSObject {
     public func setReadMode(isBarcode: Bool) {
         isBarcodeMode = isBarcode
     }
+    
+    public func setReadPower(intPower: Int) {
+        let intString = intPower.description
+        rfidBLEManager.setLaunchPowerWithstatus("1", antenna: "1", readStr: intString, writeStr: intString)
+    }
 }
 
 extension ChainwayService: FatScaleBluetoothManager {

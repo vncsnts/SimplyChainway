@@ -1,1 +1,5 @@
+## OS Data
 *.DS_Store
+
+## User settings
+xcuserdata/

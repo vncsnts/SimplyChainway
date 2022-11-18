@@ -49,11 +49,9 @@ public class ChainwayService: NSObject {
 extension ChainwayService: FatScaleBluetoothManager {
     public func receiveData(withBLEmodel model: BLEModel!, result: String!) {
         if let foundModel = model {
-            if !foundDevices.contains(where: {$0.nameStr == foundModel.nameStr}) && foundModel.nameStr != nil {
+            if !foundDevices.contains(where: {$0.nameStr == foundModel.nameStr}) && foundModel.peripheral != nil && foundModel.nameStr.hasPrefix("D5") {
                 foundDevices.append(foundModel)
-                if !foundDevices.isEmpty {
-                    delegate?.didReceiveDevices(devices: foundDevices.map({$0.nameStr}))
-                }
+                delegate?.didReceiveDevice(device: foundModel.peripheral)
             }
         }
     }
@@ -103,7 +101,7 @@ extension ChainwayService: FatScaleBluetoothManager {
 }
 
 public protocol ChainwayServiceDelegate: AnyObject {
-    func didReceiveDevices(devices: [String]) //The Delegate for the array of the updates received BLE Devices
+    func didReceiveDevice(device: CBPeripheral)
     func didConnectToDevice(deviceName: String)
     func didDisconnectToDevice(deviceName: String)
     func didFailWithDevice(deviceName: String)
@@ -113,7 +111,7 @@ public protocol ChainwayServiceDelegate: AnyObject {
 }
 
 extension ChainwayServiceDelegate {
-    func didReceiveDevices(devices: [String]) {}
+    func didReceiveDevice(device: CBPeripheral) {}
     func didConnectToDevice(deviceName: String) {}
     func didDisconnectToDevice(deviceName: String) {}
     func didFailWithDevice(deviceName: String) {}

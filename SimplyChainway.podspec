@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "SimplyChainway"
-  spec.version      = "0.1.8"
+  spec.version      = "0.1.9"
   spec.summary      = "Chainway R6 Pro SDK"
   spec.description  = "A wrapper for chainway SDK by Vince Santos"
 

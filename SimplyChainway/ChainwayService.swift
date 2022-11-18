@@ -40,6 +40,10 @@ public class ChainwayService: NSObject {
         let intString = intPower.description
         rfidBLEManager.setLaunchPowerWithstatus("1", antenna: "1", readStr: intString, writeStr: intString)
     }
+    
+    public func getBatteryLevel() {
+        rfidBLEManager.getBatteryLevel()
+    }
 }
 
 extension ChainwayService: FatScaleBluetoothManager {

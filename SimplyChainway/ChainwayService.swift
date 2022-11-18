@@ -49,7 +49,7 @@ public class ChainwayService: NSObject {
 extension ChainwayService: FatScaleBluetoothManager {
     public func receiveData(withBLEmodel model: BLEModel!, result: String!) {
         if let foundModel = model {
-            if !foundDevices.contains(where: {$0.nameStr == foundModel.nameStr}) && foundModel.peripheral != nil && foundModel.nameStr.hasPrefix("D5") {
+            if !foundDevices.contains(where: {$0.nameStr == foundModel.nameStr}) && foundModel.nameStr != nil && foundModel.peripheral != nil && foundModel.nameStr.hasPrefix("D5") {
                 foundDevices.append(foundModel)
                 delegate?.didReceiveDevice(device: foundModel.peripheral)
             }

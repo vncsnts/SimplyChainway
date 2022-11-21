@@ -44,6 +44,10 @@ public class ChainwayService: NSObject {
     public func getBatteryLevel() {
         rfidBLEManager.getBatteryLevel()
     }
+    
+    public func disconnectDevice() {
+        rfidBLEManager.closeBleAndDisconnect()
+    }
 }
 
 extension ChainwayService: FatScaleBluetoothManager {

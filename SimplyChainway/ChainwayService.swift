@@ -26,6 +26,10 @@ public class ChainwayService: NSObject {
         rfidBLEManager.bleDoScan()
     }
     
+    public func stopScanningDevices() {
+        rfidBLEManager.closeBleAndDisconnect()
+    }
+    
     public func connectToDevice(withName deviceName: String) {
         if let foundDeviceWithName = foundDevices.first(where: {$0.nameStr == deviceName}) {
             rfidBLEManager.connect(foundDeviceWithName.peripheral, macAddress: foundDeviceWithName.addressStr)

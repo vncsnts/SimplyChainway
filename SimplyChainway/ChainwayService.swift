@@ -65,6 +65,13 @@ extension ChainwayService: FatScaleBluetoothManager {
     }
     
     public func connectPeripheralSuccess(_ nameStr: String!) {
+        rfidBLEManager.isStreamRealTimeTags = true
+        rfidBLEManager.isSupportRssi = true
+        rfidBLEManager.tagTypeStr = "0"
+        rfidBLEManager.isReadNewLabEPC = true
+        rfidBLEManager.isReadNewLabEPCANDTID = false
+        rfidBLEManager.isReadNewLabEPCANDTIDANDUSER = false
+        rfidBLEManager.setEpcTidUserWithAddressStr("0", length: "0", epcStr: "0")
         connectedDeviceName = nameStr
         delegate?.didConnectToDevice(deviceName: connectedDeviceName)
     }
@@ -102,8 +109,18 @@ extension ChainwayService: FatScaleBluetoothManager {
     }
 
     public func receiveData(withBLEDataSource dataSource: NSMutableArray!, allCount: Int, countArr: NSMutableArray!, dataSource1: NSMutableArray!, countArr1: NSMutableArray!, dataSource2: NSMutableArray!, countArr2: NSMutableArray!) {
-        if let tagsAsStringArray = dataSource as? [String] {
-            delegate?.didReceiveRFTags(tags: tagsAsStringArray)
+        //Ignored and not needed as its returning array type
+    }
+    
+    public func didScanRF(_ epcWithRssiPostfix: String!) {
+        if var epcRssi = epcWithRssiPostfix {
+            let rssiString = String(epcRssi.suffix(4))
+            if let rawDecimalIntRssi = Int(rssiString, radix: 16) {
+                let rssi = (65535 - rawDecimalIntRssi) / 10
+                epcRssi.removeLast(4)
+                delegate?.didReceiveRF(epc: epcRssi, rssi: rssi)
+            }
+            
         }
     }
 }
@@ -114,7 +131,7 @@ public protocol ChainwayServiceDelegate: AnyObject {
     func didDisconnectToDevice(deviceName: String)
     func didFailWithDevice(deviceName: String)
     func didReceiveBatteryLevel(batteryLevel: Int)
-    func didReceiveRFTags(tags: [String])
+    func didReceiveRF(epc: String, rssi: Int)
     func didReceiveBarcode(barcode: String)
 }
 
@@ -124,7 +141,7 @@ extension ChainwayServiceDelegate {
     func didDisconnectToDevice(deviceName: String) {}
     func didFailWithDevice(deviceName: String) {}
     func didReceiveBatteryLevel(batteryLevel: Int) {}
-    func didReceiveRFTags(tags: [String]) {}
+    func didReceiveRF(epc: String, rssi: Int) {}
     func didReceiveBarcode(barcode: String) {}
 }
 

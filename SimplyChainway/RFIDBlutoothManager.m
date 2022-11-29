@@ -75,6 +75,7 @@
         self.dataCount=0;
         self.isInfo=NO;
         self.isSupportRssi=NO;
+        self.isStreamRealTimeTags=NO;
         self.isBLE40=NO;
         self.isName=NO;
         self.isHeader = NO;
@@ -1347,24 +1348,30 @@ NSInteger dataIndex=0;
             //*************** EPC    **************
             NSString * newEpcData= [allData substringWithRange:NSMakeRange(4, epclen*2)];
             NSString * epcAndRssiData= [allData substringWithRange:NSMakeRange(4, epclen*2+rssiLen*2)];
-            for (NSInteger j = 0 ; j < self.dataSource.count; j ++) {
-                NSString * oldEPC = self.dataSource[j];
-                oldEPC= [oldEPC substringWithRange:NSMakeRange(0,oldEPC.length-rssiLen*2 )];
-                if ([oldEPC isEqualToString:newEpcData]) {
-                    isHave = YES;
-                    self.allCount ++;
-                    NSString *countStr=self.countArr[j];
-                    [self.countArr replaceObjectAtIndex:j withObject:[NSString stringWithFormat:@"%ld",countStr.integerValue + 1]];
-                    break;
+            if (_isStreamRealTimeTags == YES) {
+                [self.managerDelegate didScanRF:epcAndRssiData];
+            } else {
+                for (NSInteger j = 0 ; j < self.dataSource.count; j ++) {
+                    NSString * oldEPC = self.dataSource[j];
+                    oldEPC= [oldEPC substringWithRange:NSMakeRange(0,oldEPC.length-rssiLen*2 )];
+                    if ([oldEPC isEqualToString:newEpcData]) {
+                        isHave = YES;
+                        self.allCount ++;
+                        NSString *countStr=self.countArr[j];
+                        [self.countArr replaceObjectAtIndex:j withObject:[NSString stringWithFormat:@"%ld",countStr.integerValue + 1]];
+                        break;
+                    }
                 }
-            }
-            if (!self.dataSource || self.dataSource.count == 0 || !isHave) {
-                [self.dataSource addObject:epcAndRssiData];
-                [self.countArr addObject:@"1"];
+                if (!self.dataSource || self.dataSource.count == 0 || !isHave) {
+                    [self.dataSource addObject:epcAndRssiData];
+                    [self.countArr addObject:@"1"];
+                }
             }
         }
         
-        [self.managerDelegate receiveDataWithBLEDataSource:self.dataSource allCount:self.allCount countArr:self.countArr dataSource1:self.dataSource1 countArr1:self.countArr1 dataSource2:self.dataSource2 countArr2:self.countArr2];
+        if (_isStreamRealTimeTags == NO) {
+            [self.managerDelegate receiveDataWithBLEDataSource:self.dataSource allCount:self.allCount countArr:self.countArr dataSource1:self.dataSource1 countArr1:self.countArr1 dataSource2:self.dataSource2 countArr2:self.countArr2];
+        }
     }
 }
 

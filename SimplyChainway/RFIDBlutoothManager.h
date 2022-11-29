@@ -39,6 +39,8 @@
 -(void)disConnectPeripheral;
 //Added device failure delegate
 -(void)didFailPeripheral;
+//Added real time RFID and RSSI delegate
+-(void)didScanRF:(NSString*) epcWithRssiPostfix;
 //更改蓝牙设备名称成功
 - (void)updateBLENameSuccess;
 //  设置Gen2是否成功
@@ -88,6 +90,8 @@
 @property (nonatomic,assign)BOOL isgetLab;//是否是获取标签
 
 @property (nonatomic,assign)BOOL isSupportRssi;//是否是获取升级后的标签
+
+@property (nonatomic,assign)BOOL isStreamRealTimeTags; //bool for real time tag delegate
 
 @property (nonatomic,assign)BOOL isBLE40;//蓝牙4.0
 

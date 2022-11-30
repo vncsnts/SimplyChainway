@@ -1037,13 +1037,15 @@ NSInteger dataIndex=0;
             
             if (self.isGetBattery) {
                 //获取电池电量
-                NSString *battyStr=[dataStr substringWithRange:NSMakeRange(12, 2)];
-                NSInteger n = strtoul([battyStr UTF8String], 0, 16);//16进制数据转10进制的NSInteger
-                //NSLog(@"battyStr===%@",battyStr);
-                NSString *batStr=[NSString stringWithFormat:@"%ld",n];
-                [self.managerDelegate receiveMessageWithtype:@"e5" dataStr:batStr];
-                self.isGetBattery = NO;
-                return;
+                if ([dataStr substringWithRange:NSMakeRange(12, 2)]) {
+                    NSString *battyStr=[dataStr substringWithRange:NSMakeRange(12, 2)];
+                    NSInteger n = strtoul([battyStr UTF8String], 0, 16);//16进制数据转10进制的NSInteger
+                    //NSLog(@"battyStr===%@",battyStr);
+                    NSString *batStr=[NSString stringWithFormat:@"%ld",n];
+                    [self.managerDelegate receiveMessageWithtype:@"e5" dataStr:batStr];
+                    self.isGetBattery = NO;
+                    return;
+                } //Vince - Added a checking for the substring range, getting error for get Battery polling
             }
             
             if (self.isCodeLab) {

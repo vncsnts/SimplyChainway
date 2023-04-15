@@ -441,12 +441,12 @@
 #pragma mark - Private Methods
 - (void)startBleScan
 {
-    if (self.centralManager.state == CBCentralManagerStatePoweredOff)
+    if (self.centralManager.state == CBManagerStatePoweredOff)
     {
         self.connectDevice = NO;
         if ([self.managerDelegate respondsToSelector:@selector(connectBluetoothFailWithMessage:)])
         {
-            [self.managerDelegate connectBluetoothFailWithMessage:[self centralManagerStateDescribe:CBCentralManagerStatePoweredOff]];
+            [self.managerDelegate connectBluetoothFailWithMessage:[self centralManagerStateDescribe:CBManagerStatePoweredOff]];
         }
         return;
     }
@@ -495,24 +495,24 @@
 
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central
 {
-    if (central.state != CBCentralManagerStatePoweredOn)
+    if (central.state != CBManagerStatePoweredOn)
     {
         if ([self.managerDelegate respondsToSelector:@selector(connectBluetoothFailWithMessage:)])
         {
-            if (central.state == CBCentralManagerStatePoweredOff)
+            if (central.state == CBManagerStatePoweredOff)
             {
                 self.connectDevice = NO;
-                [self.managerDelegate connectBluetoothFailWithMessage:[self centralManagerStateDescribe:CBCentralManagerStatePoweredOff]];
+                [self.managerDelegate connectBluetoothFailWithMessage:[self centralManagerStateDescribe:CBManagerStatePoweredOff]];
             }
         }
         
     }
     
     switch (central.state) {
-        case CBCentralManagerStatePoweredOn:
+        case CBManagerStatePoweredOn:
             NSLog(@"CBCentralManagerStatePoweredOn");
             break;
-        case CBCentralManagerStatePoweredOff:
+        case CBManagerStatePoweredOff:
             NSLog(@"蓝牙断开：CBCentralManagerStatePoweredOff");
             break;
         default:
@@ -1598,19 +1598,19 @@ NSInteger dataIndex=0;
 - (CBCharacteristic *)myCharacteristic
 {
     if (_myCharacteristic == nil) {
-        _myCharacteristic = [CBCharacteristic new];
+        _myCharacteristic = [CBCharacteristic alloc];
     }
     return _myCharacteristic;
 }
 
-- (NSString *)centralManagerStateDescribe:(CBCentralManagerState )state
+- (NSString *)centralManagerStateDescribe:(CBManagerState )state
 {
     NSString *descStr = @"";
     switch (state) {
-        case CBCentralManagerStateUnknown:
+        case CBManagerStateUnknown:
             
             break;
-        case CBCentralManagerStatePoweredOff:
+        case CBManagerStatePoweredOff:
             descStr = @"请打开蓝牙";
             break;
         default:
